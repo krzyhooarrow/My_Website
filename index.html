@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="home">
+
+<!-- Navbar Area -->
+<nav id="navbar">
+    <h2><a href="#home"><span class="text-primary">Krzysztof</span> Strzała</a></h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#socials">Socials</a></li>
+    </ul>
+</nav>
+
+<!-- Showcase Area -->
+<header id="showcase">
+    <div class="showcase-content">
+        <div class="container">
+            <h1></h1>
+
+        </div>
+    </div>
+</header>
+
+<!-- Section: About -->
+<section id="about">
+    <div class="container">
+        <h2 class="about-heading">About <span class="text-primary">Me</span></h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>A Little Bit <span class="text-primary">About Myself</span></h3>
+                <ul>
+                    <li>Born in 1997</li>
+                    <li>2003-2009 primary school</li>
+                    <li>20012-2015 secondary school</li>
+                    <li>now I study computer science on Wrocław University of Science and Technology</li>
+                </ul>
+
+                  </div>
+
+            <div class="about-image">
+                <img src="images/my_photo.jpeg" alt="Pictures of myself">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Section: Projects -->
+
+<section id="projects">
+    <div class="container">
+        <h2 class="about-heading">Look at <span class="text-primary">My Fragment Codes</span></h2>
+        <div class="project-content">
+            <div class="about-text">
+                <h3>More You can find <span class="text-primary">on my GitHub Account </span></h3>
+                <pre>
+                        <code>
+
+                def find_eulerian_tour(MatchedMSTree, G):
+                    # find neigbours
+                    neighbours = {}
+                    for edge in MatchedMSTree:
+                        if edge[0] not in neighbours:
+                            neighbours[edge[0]] = []
+
+                        if edge[1] not in neighbours:
+                            neighbours[edge[1]] = []
+
+                        neighbours[edge[0]].append(edge[1])
+                        neighbours[edge[1]].append(edge[0])
+
+                    # print("Neighbours: ", neighbours)
+
+                    # finds the hamiltonian circuit
+                    start_vertex = MatchedMSTree[0][0]
+                    EP = [neighbours[start_vertex][0]]
+
+                    while len(MatchedMSTree) > 0:
+                        for i, v in enumerate(EP):
+                            if len(neighbours[v]) > 0:
+                                break
+
+                        while len(neighbours[v]) > 0:
+                            w = neighbours[v][0]
+
+                            remove_edge_from_matchedMST(MatchedMSTree, v, w)
+
+                            del neighbours[v][(neighbours[v].index(w))]
+                            del neighbours[w][(neighbours[w].index(v))]
+
+                            i += 1
+                            EP.insert(i, w)
+
+                            v = w
+
+                    return EP
+</code>
+                    </pre>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Section: Contact -->
+<section id="contact" class="bg-light">
+    <div class="container">
+        <div class="form-containter">
+            <div class="form-box">
+                <h3>Shoot Me a <span class="text-primary">Message</span></h3>
+                <form>
+                    <div class="form-group">
+                        <label for="last-name">Topic</label>
+                        <input type="text" placeholder="Enter Topic">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email for response:</label>
+                        <input type="email" placeholder="Enter Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea rows="7" placeholder="Enter Your Message"></textarea>
+                    </div>
+                        <input type="submit" value="Send Message" class="contact-btn">
+                </form>
+            </div>
+        </div>
+</section>
+<section id="socials">
+    <footer>
+        <a href="https://www.facebook.com/krzyhooarrow" class="fa fa-facebook"></a>
+        <a href="https://www.linkedin.com/in/krzysztof-strzała-656568184/" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/krzyhooarrow/" class="fa fa-instagram"></a>
+        <a href="https://github.com/krzyhooarrow" class="fa fa-github"></a>
+        <a href="https://www.youtube.com/channel/UCHL7vT_YRuKhs27SALdE91g?view_as=subscriber" class="fa fa-youtube"></a>
+
+    </footer>
+</section>
+<!--jQuery CDN -->
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script src="main.js"></script>
+</body>
+</html>
