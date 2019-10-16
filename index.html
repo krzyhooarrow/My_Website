@@ -35,18 +35,21 @@
 <!-- Section: About -->
 <section id="about">
     <div class="container">
-        <h2 class="about-heading">About <span class="text-primary">Me</span></h2>
+        <h2 class="about-heading">About <span class="text-primary ">Me</span></h2>
         <div class="about-content">
-            <div class="about-text">
+            <div class="about-text ">
                 <h3>A Little Bit <span class="text-primary">About Myself</span></h3>
                 <ul>
                     <li>I study computer science on Wrocław University of Science and Technology. My Passion is algorithmics and graph's theory. In free time I explore world of cryptography.</li>
                     <li>I was born in Opole. I'm focused on improving my body and mind. I'm MMA maniac. If I wasn't student on Univeristy I would be professional MMA fighter</li>
                 </ul>
 
+                <div class="location-image">
+                    <img src="images/location.png" alt="U can find me here">
+                </div>
                   </div>
 
-            <div class="about-image">
+            <div class="about-image ">
                 <img src="images/my_photo.jpeg" alt="Pictures of myself">
             </div>
         </div>
@@ -58,55 +61,83 @@
 
 <section id="projects">
     <div class="container">
-        <h2 class="about-heading">Look at <span class="text-primary">My Fragment Codes</span></h2>
+        <h2 class="about-heading">What am I currently <span class="text-primary">working on</span></h2>
+        <div class="about-text ">
+<!--       -->
+<!--        <ul class="head blue">-->
+<!--            <li >Engineers's Thesis</li>-->
+
+<!--            <li>This website</li>-->
+
+<!--            <li>Learning image processing algorithms using python's lib OpenCV </li>-->
+<!--        </ul>-->
+            <table style="width:100%">
+                <tr>
+                    <th>Engineers's Thesis</th>
+                </tr>
+                <tr>
+                    <td>This website</td>
+                </tr>
+                <tr>
+                    <td>Learning image processing algorithms using python's lib OpenCV</td>
+
+                </tr>
+            </table>
+
+        </div>
+        <br>
+
         <div class="project-content">
             <div class="about-text">
                 <h3>More You can find <span class="text-primary">on my GitHub Account </span></h3>
-                <pre>
-                        <code>
+<!--                <pre>-->
+<!--                        <code>-->
 
-                def find_eulerian_tour(MatchedMSTree, G):
-                    # find neigbours
-                    neighbours = {}
-                    for edge in MatchedMSTree:
-                        if edge[0] not in neighbours:
-                            neighbours[edge[0]] = []
+<!--                def find_eulerian_tour(MatchedMSTree, G):-->
+<!--                    # find neigbours-->
+<!--                    neighbours = {}-->
+<!--                    for edge in MatchedMSTree:-->
+<!--                        if edge[0] not in neighbours:-->
+<!--                            neighbours[edge[0]] = []-->
 
-                        if edge[1] not in neighbours:
-                            neighbours[edge[1]] = []
+<!--                        if edge[1] not in neighbours:-->
+<!--                            neighbours[edge[1]] = []-->
 
-                        neighbours[edge[0]].append(edge[1])
-                        neighbours[edge[1]].append(edge[0])
+<!--                        neighbours[edge[0]].append(edge[1])-->
+<!--                        neighbours[edge[1]].append(edge[0])-->
 
-                    # print("Neighbours: ", neighbours)
+<!--                    # print("Neighbours: ", neighbours)-->
 
-                    # finds the hamiltonian circuit
-                    start_vertex = MatchedMSTree[0][0]
-                    EP = [neighbours[start_vertex][0]]
+<!--                    # finds the hamiltonian circuit-->
+<!--                    start_vertex = MatchedMSTree[0][0]-->
+<!--                    EP = [neighbours[start_vertex][0]]-->
 
-                    while len(MatchedMSTree) > 0:
-                        for i, v in enumerate(EP):
-                            if len(neighbours[v]) > 0:
-                                break
+<!--                    while len(MatchedMSTree) > 0:-->
+<!--                        for i, v in enumerate(EP):-->
+<!--                            if len(neighbours[v]) > 0:-->
+<!--                                break-->
 
-                        while len(neighbours[v]) > 0:
-                            w = neighbours[v][0]
+<!--                        while len(neighbours[v]) > 0:-->
+<!--                            w = neighbours[v][0]-->
 
-                            remove_edge_from_matchedMST(MatchedMSTree, v, w)
+<!--                            remove_edge_from_matchedMST(MatchedMSTree, v, w)-->
 
-                            del neighbours[v][(neighbours[v].index(w))]
-                            del neighbours[w][(neighbours[w].index(v))]
+<!--                            del neighbours[v][(neighbours[v].index(w))]-->
+<!--                            del neighbours[w][(neighbours[w].index(v))]-->
 
-                            i += 1
-                            EP.insert(i, w)
+<!--                            i += 1-->
+<!--                            EP.insert(i, w)-->
 
-                            v = w
+<!--                            v = w-->
 
-                    return EP
-</code>
-                    </pre>
+<!--                    return EP-->
+<!--</code>-->
+<!--                    </pre>-->
 
             </div>
+<!--            <div class="about-image">-->
+<!--                <img src="images/map.png" alt="Pictures of myself" >-->
+<!--            </div>-->
 
         </div>
     </div>
@@ -139,7 +170,7 @@
 <section id="socials">
     <footer>
         <a href="https://www.facebook.com/krzyhooarrow" class="fa fa-facebook"></a>
-        <a href="https://www.linkedin.com/in/krzysztof-strzała-656568184/" class="fa fa-twitter"></a>
+        <a href="https://www.linkedin.com/in/krzysztof-strzała-656568184/" class="fa fa-linkedin"></a>
         <a href="https://www.instagram.com/krzyhooarrow/" class="fa fa-instagram"></a>
         <a href="https://github.com/krzyhooarrow" class="fa fa-github"></a>
         <a href="https://www.youtube.com/channel/UCHL7vT_YRuKhs27SALdE91g?view_as=subscriber" class="fa fa-youtube"></a>

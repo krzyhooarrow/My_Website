@@ -23,6 +23,14 @@ body
     max-width: 1100px;
     margin: auto;
 }
+.text-size-flex-1_5{
+    font-size: 1vw;
+}
+
+.image-size-flex-1_5{
+    width: 20vw;
+    height: 20vw;
+}
 
 .text-primary
 {
@@ -149,7 +157,7 @@ body
     margin-left: auto;
     width: 55%;
     border-radius: 40%;
-    margin-top: 10px;
+    margin-top: 150px;
 
 }
 
@@ -351,4 +359,126 @@ code
 #projects h3{
     font-size: 2rem;
     margin-bottom: 1rem;
+}
+
+/*#projects .map-image img*/
+/*{*/
+/*    display: block;*/
+/*    margin-left: auto;*/
+/*    width: 55%;*/
+/*    border-radius: 40%;*/
+/*    margin-top: 10px;*/
+
+/*}*/
+
+
+
+#projects .about-content
+{
+    display: flex;
+}
+
+#projects .about-text,
+#projects .map-image
+{
+    flex: 1;
+}
+
+#projects .about-text
+{
+    text-align: center;
+}
+
+#projects .map-image img
+{
+    display: block;
+    margin-left: auto;
+    width: 55%;
+    border-radius: 40%;
+    margin-top: 10px;
+
+}
+
+/*ul.a {*/
+/*    list-style-type: circle;*/
+/*}*/
+
+/*ul.b {*/
+/*    list-style-type: square;*/
+/*}*/
+
+/*ol.c {*/
+/*    list-style-type: upper-roman;*/
+/*}*/
+
+/*ol.d {*/
+/*    list-style-type: lower-alpha;*/
+/*}*/
+
+/*ol {*/
+/*    background: #ff9999;*/
+/*    padding: 20px;*/
+/*}*/
+
+ul.blue {
+    background: #3693ff;
+    padding: 20px;
+}
+
+ol li {
+    background: #ffe5e5;
+    padding: 5px;
+    margin-left: 35px;
+}
+
+/*ul li {*/
+/*    background: #cce5ff;*/
+/*    margin: 5px;*/
+/*}*/
+
+/*ul.a {*/
+/*    list-style-position: outside;*/
+/*}*/
+
+/*ul.b {*/
+/*    list-style-position: inside;*/
+/*}*/
+
+ul.head {
+    list-style-image: url('../images/small-head.gif');
+    /*float: right;*/
+    /*text-align: right;*/
+    list-style-position: inside;
+
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 15px;
+    font-weight: bold;
+}
+tr:hover {background-color: #3693ff;}
+
+/*f5f5f5*/
+
+/*th, td {*/
+/*    padding: 15px;*/
+/*    text-align: left;*/
+/*}*/
+#about .location-image img
+{
+    display: block;
+    margin-left: auto;
+    width: 100%;
+    /*border-radius: 20%;*/
+    margin-top: 40px;
+
+}
+#about .location-image-image
+{
+    flex: 1;
 }
