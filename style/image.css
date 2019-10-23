@@ -1,0 +1,62 @@
+/*body {*/
+/*    background: #000;*/
+/*    height: 100vh;*/
+/*    width: 100%;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
+
+/*.header {*/
+/*    background: url(../images/background.jpg) no-repeat center center/cover;*/
+/*    height: 100vh;*/
+/*}*/
+
+
+.before {
+    background: url('https://tr.af/images/supply-urban-nyc-before.jpg') no-repeat center center;
+    background-size: cover;
+    height: 90vh;
+}
+
+.section-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.before-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    width: auto;
+}
+
+.before-wrapper:before {
+    display: block;
+    height: 100%;
+    width: 100%;
+    content: '';
+}
+
+.after-wrapper {
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.after {
+    background: url('https://tr.af/images/supply-urban-nyc-after.jpg') no-repeat center center;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-size: cover;
+    position: relative;
+    display: block;
+    height: 90vh;
+    width: auto;
+}
